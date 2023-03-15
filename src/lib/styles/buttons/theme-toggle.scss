@@ -1,0 +1,70 @@
+@import "../config/index.scss";
+
+.light .cst-theme-toggle-root {
+  color: mix($yellow, $dark-shade);
+  background: rgba(0, 0, 0, 0.06);
+  box-shadow: inset 1px 1px 3px rgba(black, 0.2);
+  border: 1px solid rgba($dark-shade, 0.135);
+
+  .svg-container {
+    padding-left: 0;
+  }
+}
+
+.dark .cst-theme-toggle-root {
+  color: mix($purple, $light-shade);
+  background: rgba(0, 0, 0, 0.36);
+  box-shadow: inset 1px 1px 3px black;
+  border: 1px solid rgba(white, 0.25);
+}
+
+.cst-theme-toggle-root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-origin: center;
+  height: 24px;
+  width: 24px;
+  position: relative;
+  border-radius: 28px;
+
+  &,
+  & svg,
+  & input {
+    cursor: pointer;
+  }
+
+  input {
+    position: absolute;
+    height: 26px;
+    width: 26px;
+    top: 0;
+    left: 0;
+    appearance: none;
+    margin: 0;
+  }
+
+  input,
+  .svg-container {
+    transition: all 80ms ease;
+  }
+
+  .svg-container {
+    display: flex;
+    place-content: center;
+    line-height: 0;
+    align-items: center;
+    justify-content: center;
+    padding-left: 1px;
+  }
+
+  input:checked + .svg-container {
+  }
+
+  input:checked,
+  input:not(:checked) + .svg-container {
+    opacity: 0;
+    width: 0;
+    overflow-x: hidden;
+  }
+}

@@ -1,0 +1,28 @@
+.cst-header-root {
+  height: 60px;
+  padding-top: 12px;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  .header-container {
+    position: relative;
+    height: 36px;
+    margin: 0 12px 12px 12px;
+    border-radius: 3px;
+    max-width: 960px;
+    width: calc(100% - 24px);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .header-area {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    padding: 0 6px;
+  }
+}

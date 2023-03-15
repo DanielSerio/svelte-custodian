@@ -1,0 +1,29 @@
+$blue: #093060;
+$teal: #037b6b;
+$green: #51a53a;
+$yellow: #e8c456;
+$red: #d84938;
+$purple: #5c3a50;
+$pink: #b2659e;
+
+$brand: $purple;
+$light-accent: #e7ab5e;
+$light-shade: #f5ecf2;
+$dark-accent: $pink;
+$dark-shade: #17161d;
+
+$default: #999999;
+
+$primary-light: #704565;
+$info-light: #201622;
+$success-light: #578f56;
+$warning-light: #d47f1e;
+$danger-light: #f44336;
+
+$background-color-light: mix($light-shade, white, 33%);
+$color-light: mix($dark-shade, $default, 60%);
+$link-color-light: $teal;
+
+$background-color-dark: mix($dark-shade, $default, 76%);
+$color-dark: mix($light-shade, $default, 70%);
+$link-color-dark: lighten($teal, 15%);

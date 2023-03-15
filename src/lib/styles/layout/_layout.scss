@@ -1,0 +1,26 @@
+.cst-layout-root {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  padding-top: 60px;
+
+  .page-content {
+    overflow-y: auto;
+  }
+
+  &,
+  & > .page-wrap,
+  .page-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .page-content,
+  .page-wrap {
+    flex: 1;
+  }
+
+  .page-wrap {
+    justify-content: stretch;
+  }
+}

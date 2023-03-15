@@ -1,0 +1,42 @@
+@import "../config/index.scss";
+
+.cst-page-loading-root {
+  padding: 12px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 4000;
+  background: rgba(0, 0, 0, 0.5);
+
+  .glass-bar.cst-glass {
+    border-radius: 4px;
+    box-shadow: 0 4px 8px -4px rgba(black, 0.08);
+    display: flex;
+    padding: 4px;
+    overflow: hidden;
+  }
+
+  .strip-track {
+    flex: 1;
+    height: 24px;
+    outline: 1px solid white;
+    border-radius: 3px;
+    background: repeating-linear-gradient(-45deg, #b2659e 0 5%, white 5% 10%, #b2659e 10% 15%, white 15% 20%);
+    background-size: 500% 500%;
+    background-position: 0% 100%;
+    animation: load 1s linear infinite;
+    filter: blur(33px);
+  }
+}
+
+@keyframes load {
+  from {
+    background-position: 50% 185%;
+  }
+
+  to {
+    background-position: 0 0;
+  }
+}

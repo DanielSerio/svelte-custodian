@@ -1,0 +1,63 @@
+.cst-menu-btn-root {
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+
+  .btn-container {
+    width: 26px;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 4px;
+
+    svg {
+      min-width: 26px;
+      width: 100%;
+      height: auto;
+      display: block;
+
+      &:hover {
+        .bar {
+          fill: rgba(0, 0, 0, 0.8);
+        }
+      }
+
+      .bar {
+        fill: rgba(0, 0, 0, 0.4);
+        transform-origin: center center;
+        transition: all 100ms ease;
+      }
+    }
+  }
+
+  &.open > .btn-container svg {
+    .bar.bottom {
+      transform: translate(-4px, -4px) rotate(-45deg);
+    }
+
+    .bar.middle {
+      transform: rotate(90deg);
+      opacity: 0;
+    }
+
+    .bar.top {
+      transform: translate(-4px, 4px) rotate(45deg);
+    }
+  }
+}
+.light .cst-menu-btn-root > .btn-container > svg .bar {
+  fill: rgba(0, 0, 0, 0.4);
+}
+.light .cst-menu-btn-root:hover > .btn-container > svg .bar,
+.light .cst-menu-btn-root.open > .btn-container svg .bar {
+  fill: #222222;
+}
+.dark .cst-menu-btn-root > .btn-container > svg .bar {
+  fill: rgba(255, 255, 255, 0.4);
+}
+.dark .cst-menu-btn-root:hover > .btn-container > svg .bar,
+.dark .cst-menu-btn-root.open > .btn-container svg .bar {
+  fill: #dddddd;
+}
